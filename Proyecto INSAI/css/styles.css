@@ -1,7 +1,7 @@
 ﻿:root {
     --fuenteheading: 'PT Sans', sans-serif;
     --fuenteparrafo: 'Open Sans', sans-serif;
-    --primario: #784d3c;
+    --primario: #00bfd8;
     --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
@@ -71,15 +71,22 @@ img {
 }
 
 /* Header */
-.webp .header {
-    background-image: url(../img/Banner.webp);
+/*.webp .header {
+    background-image: url('../img/Banner.webp');
 }
 
 .no-webp .header {
-    background-image: url(../img/banner.jpg);
+    background-image: url('../img/banner.jpg');
+}
+*/
+.singup{
+    background-color: var(--primario);
+    font-weight: 700;
+    border-bottom-right-radius: inherit;
 }
 
 .header {
+    background-image: url(../img/banner.jpg);
     height: 60rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +118,7 @@ img {
 }
 
 .logo {
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 .logo__nombre {
