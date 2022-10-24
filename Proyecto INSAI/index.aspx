@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
+﻿<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
     <title>Bienvenida</title>
 
     <!-- Prefatch -->
@@ -15,7 +17,7 @@
 
     <!-- Fuentes -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"/>
 
 </head>
 <body>
@@ -47,8 +49,8 @@
             <article class="entrada">
                 <div class="entrada__img">
                     <picture>
-                        <source loading="lazy" srcset="img/service1.jpg" type="image/jpg">
-                        <img loading="lazy" src="img/blog1.jpg" alt="Imagen blog">
+                        <source loading="lazy" srcset="img/service1.jpg" type="image/jpg"/>
+                        <img loading="lazy" src="img/blog1.jpg" alt="Imagen blog"/>
                     </picture>
                 </div>
                 <div class="entrada__cont">
@@ -56,14 +58,14 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Contratar Servicio</a>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
             <article class="entrada">
                 <div class="entrada__img">
                     <picture>
-                        <source loading="lazy" srcset="img/service2.jpg" type="image/jpg">
-                        <img loading="lazy" src="img/blog2.jpg" alt="Imagen blog">
+                        <source loading="lazy" srcset="img/service2.jpg" type="image/jpg"/>
+                        <img loading="lazy" src="img/blog2.jpg" alt="Imagen blog"/>
                     </picture>
                 </div>
                 <div class="entrada__cont">
@@ -71,14 +73,14 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Contratar Srvicio</a>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
             <article class="entrada">
                 <div class="entrada__img">
                     <picture>
-                        <source loading="lazy" srcset="img/service3.jpg" type="image/jpg">
-                        <img loading="lazy" src="img/blog3.jpg" alt="Imagen blog">
+                        <source loading="lazy" srcset="img/service3.jpg" type="image/jpg"/>
+                        <img loading="lazy" src="img/blog3.jpg" alt="Imagen blog"/>
                     </picture>
                 </div>
                 <div class="entrada__cont">
@@ -86,7 +88,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Contratar Srvicio</a>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
         </main>
