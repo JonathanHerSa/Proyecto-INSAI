@@ -82,7 +82,7 @@ img {
 .singup{
     background-color: var(--primario);
     font-weight: 700;
-    border-bottom-right-radius: inherit;
+    border-radius: 10px;
 }
 
 .header {
@@ -194,31 +194,31 @@ img {
 }
 
 /* Sidebar */
-.cursos {
+.news {
     list-style: none;
 }
 
-.widget-curso {
+.widget-news {
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
 
-    .widget-curso:last-of-type {
+.widget-news:last-of-type {
         border: none;
         margin-bottom: 0;
-    }
+}
 
-.widget-curso__label, .curso__label {
+.widget-news__label, .curso__label {
     font-family: var(--fuenteheading);
     font-weight: 700;
 }
 
-.widget-curso__info, .curso__info {
+.widget-news__info, .curso__info {
     font-weight: 400;
 }
 
-.widget-curso__info, .widget-curso__label,
-.curso__label, .curso__info {
+.widget-news__info, .widget-news__label,
+.curso__news, .news__info {
     font-size: 2rem;
 }
 
