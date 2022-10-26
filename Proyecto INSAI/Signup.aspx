@@ -1,11 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Bienvenida</title>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Signup.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+           <title>DataBase</title>
 
     <!-- Prefatch -->
-    <link rel="prefetch" href="login.html" as="document" />
+    <link rel="prefetch" href="perfil.html" as="document" />
 
     <!-- Hojas de Estilo-->
     <link rel="preload" href="css/normalize.css" as="style" />
@@ -28,8 +31,8 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    <a href="login.html" class="navegacion__enlace">Log In</a>
-                    <a href="singup.html" class="navegacion__enlace singup">Sign Up</a>
+                    <a href="login.aspx" class="navegacion__enlace">Iniciar Sesion</a>
+                    <a href="signup.aspx" class="navegacion__enlace singup">Registrate</a>
                 </nav>
             </div>
         </div>
@@ -43,23 +46,33 @@
     </header>
 
     <main class="contenedor">
-        <h3 class="centrartexto">Sobre Nosotros</h3>
-        <div class="sobre-nosotros">
-            <div class="sobre-nosotros__img">
-                <img src="/img/nosotros2.jpg" alt="Imagen Nosotros"/>
+        <h3 class="centrartexto">Registrate</h3>
+        <div class="login-bg"></div>
+        <form class="formulario" runat="server">
+            <div class="campo">
+                <asp:Label class="campo__label--login" runat="server" Text="Nombre"></asp:Label>
+                <asp:TextBox ID="tbNombre" class="campo__field--login" type="text" placeholder="Nombre Ejemplo" runat="server"></asp:TextBox>
             </div>
-            <div class="sobre-nosotros__texto">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. 
-                    Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis 
-                    tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel 
-                    tempus rhoncus, maximus sit amet libero.
-                </p>
-                <p>
-                    Pellentesque eget est ipsum. Praesent ac ipsum a tellus ultrices faucibus et ut lectus. Cras commodo arcu et leo commodo interdum. Duis rhoncus pretium mattis. Nunc ultricies a magna eget tincidunt. Aenean ornare mi at leo tempor interdum. Cras egestas, quam eleifend ultricies ullamcorper, ante nisl vehicula mauris, ut vehicula velit nulla vitae ligula. Mauris mollis fermentum feugiat.
-                </p>
+
+            <div class="campo">
+                <asp:Label class="campo__label--login" runat="server" Text="Correo"></asp:Label>
+                <asp:TextBox ID="tbMail" class="campo__field--login" type="email" placeholder="ejemplo@mail.com" runat="server"></asp:TextBox>
             </div>
-        </div>
+            
+            <div class="campo">
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Contraseña"></asp:Label>
+                <asp:TextBox ID="tbPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="campo">
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Confirmar contraseña"></asp:Label>
+                <asp:TextBox ID="tbCPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="campo">
+
+            </div>
+        </form>
     </main>
 
     <footer class="footer">
@@ -71,8 +84,8 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotos</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    <a href="login.html" class="navegacion__enlace">Log In</a>
-                    <a href="singup.html" class="navegacion__enlace">Sign Up</a>
+                    <a href="login.aspx" class="navegacion__enlace">Log In</a>
+                    <a href="signup.aspx" class="navegacion__enlace">Sign Up</a>
                 </nav>
             </div>
         </div>

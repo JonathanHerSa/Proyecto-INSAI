@@ -5,6 +5,7 @@
     --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
+    --rojo: #ff0000;
 }
 
 html {
@@ -80,9 +81,13 @@ img {
 }
 */
 .singup{
-    background-color: var(--primario);
     font-weight: 700;
-    border-radius: 10px;
+}
+
+.singup:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+    padding 1rem 3rem;
 }
 
 .header {
@@ -275,4 +280,43 @@ img {
 
 .campo__field--textarea {
     height: 20rem;
+}
+
+/*login*/
+.login-bg {
+    background-image: url(../img/login.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.campo__buton {
+    padding: 0.3rem 3rem;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.campo__label--login {
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__labelSU {
+    text-align: right;
+    font-size: 1rem;
+}
+
+.campo__labelSU--registro{
+    color: var(--negro);
+}
+
+.campo__labelSU--error{
+    color: var(--rojo);
+}
+
+.campo__field--login {
+    flex: 1;
+    border: 1px solid var(--gris);
+    margin-left: 1rem;
 }
