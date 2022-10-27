@@ -31,6 +31,7 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="addProducto.aspx" class="navegacion__enlace">Añadir Producto</a>
                     <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>
@@ -45,28 +46,27 @@
     </header>
 
     <main class="contenedor">
-        <h3 class="centrartexto">Registrate</h3>
+        <h3 class="centrartexto">Registrar Producto</h3>
         <div class="login-bg login-bg__su"></div>
         <form class="formulario__reg formulario__reg--su" runat="server">
             <div class="campo">
-                <asp:Label class="campo__label--login" runat="server" Text="Codigo de Barras"></asp:Label>
-                <asp:TextBox ID="tbId" class="campo__field--login" type="number" placeholder="1234
-                    " runat="server"></asp:TextBox>
+                <asp:Label class="campo__label--login" runat="server" Text="Codigo"></asp:Label>
+                <asp:TextBox ID="tbId" class="campo__field--login" TextMode="SingleLine" placeholder="1234" runat="server"></asp:TextBox>
             </div>
 
             <div class="campo">
-                <asp:Label class="campo__label--login" runat="server" Text="Correo"></asp:Label>
-                <asp:TextBox ID="tbMail" class="campo__field--login" type="email" placeholder="ejemplo@mail.com" runat="server"></asp:TextBox>
+                <asp:Label class="campo__label--login" runat="server" Text="Nombre"></asp:Label>
+                <asp:TextBox ID="tbNombre" class="campo__field--login" type="text" placeholder="Nombre De Producto" runat="server"></asp:TextBox>
             </div>
             
             <div class="campo">
-                <asp:Label CssClass="campo__label--login" runat="server" Text="Contraseña"></asp:Label>
-                <asp:TextBox ID="tbPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Stock"></asp:Label>
+                <asp:TextBox ID="tbStock" class="campo__field--login" type="text" placeholder="25" runat="server"></asp:TextBox>
             </div>
 
             <div class="campo">
-                <asp:Label CssClass="campo__label--login" runat="server" Text="Confirmar contraseña"></asp:Label>
-                <asp:TextBox ID="tbCPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Descripcion"></asp:Label>
+                <asp:TextBox ID="tbDesc" class="campo__field--login campo__field--textarea" TextMode="MultiLine" placeholder="Descripcion" runat="server"></asp:TextBox>
             </div>
 
             <div class="campo">
@@ -75,7 +75,7 @@
             </div>
 
             <div class="campo">
-                <%--<asp:Button CssClass="boton boton--secundario" ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistro__Click" />--%>
+                <asp:Button CssClass="boton boton--secundario" ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistro__Click" />
             </div>
 
             <div class="campo">
@@ -93,6 +93,7 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="addProducto.aspx" class="navegacion__enlace">Añadir Producto</a>
                     <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>

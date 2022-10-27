@@ -31,6 +31,7 @@
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="addProducto.aspx" class="navegacion__enlace">Añadir Producto</a>
                     <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>
@@ -58,8 +59,17 @@
         <aside class="sidebar">
             <h3>Peril</h3>
             <form class="sidebar" runat="server">
-                <asp:Label CssClass="campo__label" ID="lbnombre" runat="server" Text=""></asp:Label>
-                <asp:Button CssClass="boton boton--secundario" ID="btnCerrar" runat="server" Text="Cerrar Sesion" OnClick="btnCerrar__click"/>
+                <div class="campo">
+                    <label class="campo__label" for="lbnombre">Nombre:</label>
+                    <asp:Label CssClass="campo__label" ID="lbnombre" runat="server" Text=""></asp:Label>
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="lbMail">Mail:</label>
+                    <asp:Label CssClass="campo__label" ID="LbMail" runat="server" Text=""></asp:Label>
+                </div>
+                <div class="campo">
+                    <asp:Button CssClass="boton boton--secundario" ID="btnCerrar" runat="server" Text="Cerrar Sesion" OnClick="btnCerrar__click"/>
+                </div>
             </form>
         </aside>
     </div>
@@ -71,7 +81,8 @@
                 </a>
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a
+                    <a href="addProducto.aspx" class="navegacion__enlace">Añadir Producto</a>
                     <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>

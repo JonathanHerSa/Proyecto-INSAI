@@ -12,14 +12,21 @@ public partial class Perfil : System.Web.UI.Page
         if (Session["Logged"] == null){
             Response.Redirect("login.aspx");
         }
+        string nombre;
+        string mail;
         string usuario = Session["Logged"].ToString();
-        string cadena = "select * from Usuario_JHS where idUsuario = '" + usuario + "'";
         using (SqlConnection conn = new SqlConnection(conectar))
         {
-            SqlCommand reg = new SqlCommand(cadena, conn);
+            SqlCommand reg = new SqlCommand("SP_SelectUsuario", conn);
+            reg.CommandType = CommandType.StoredProcedure;
+            reg.Parameters.AddWithValue("@idUsuario", Convert.ToInt32(usuario));
             reg.Connection.Open();
             SqlDataReader dr = reg.ExecuteReader();
-            //lbnombre.Text = Convert.ToString(dr[1]);
+            dr.Read();
+            nombre = Convert.ToString(dr[1]);
+            mail = Convert.ToString(dr[2]);
+            lbnombre.Text = nombre;
+            LbMail.Text = mail;
         }
     }
 
