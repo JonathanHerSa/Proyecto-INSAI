@@ -25,12 +25,10 @@
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="Index.html">
+                <a class="logo">
                     <h1 class="logo__nombre no-margin centrartexto">Data<span class="logo__bold">Base</span></h1>
                 </a>
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                     <a href="login.aspx" class="navegacion__enlace">Iniciar Sesion</a>
                     <a href="signup.aspx" class="navegacion__enlace singup">Registrate</a>
                 </nav>
@@ -47,8 +45,8 @@
 
     <main class="contenedor">
         <h3 class="centrartexto">Registrate</h3>
-        <div class="login-bg"></div>
-        <form class="formulario" runat="server">
+        <div class="login-bg login-bg__su"></div>
+        <form class="formulario__reg formulario__reg--su" runat="server">
             <div class="campo">
                 <asp:Label class="campo__label--login" runat="server" Text="Nombre"></asp:Label>
                 <asp:TextBox ID="tbNombre" class="campo__field--login" type="text" placeholder="Nombre Ejemplo" runat="server"></asp:TextBox>
@@ -70,7 +68,16 @@
             </div>
 
             <div class="campo">
+                <asp:Label CssClass="campo__labelSU--error campo__labelSU" ID="lbError" runat="server" Text=""></asp:Label>
+                <asp:Label CssClass="campo__labelSU--correct campo__labelSU" ID="lbCorrect" runat="server" Text=""></asp:Label>
+            </div>
 
+            <div class="campo">
+                <asp:Button CssClass="boton boton--secundario" ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistro__Click" />
+            </div>
+
+            <div class="campo">
+                <a href="Login.aspx" class="campo__labelSU campo__labelSU--registro">Iniciar Sesion</a>
             </div>
         </form>
     </main>
@@ -78,14 +85,12 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo">
                     <h1 class="logo__nombre no-margin centrartexto">Data<span class="logo__bold">Base</span></h1>
                 </a>
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotos</a>
-                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    <a href="login.aspx" class="navegacion__enlace">Log In</a>
-                    <a href="signup.aspx" class="navegacion__enlace">Sign Up</a>
+                    <a href="login.aspx" class="navegacion__enlace">Iniciar Sesion</a>
+                    <a href="signup.aspx" class="navegacion__enlace">Registrar</a>
                 </nav>
             </div>
         </div>

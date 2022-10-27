@@ -8,28 +8,31 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
-    string patron = "InfoToolsSV";
+    string patron = "InsaiJHS";
+    int idUsuario;
     protected void btnEnviar__Click (object sender, EventArgs e)
     {
         string conectar = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
-        SqlConnection sqldb = new SqlConnection(conectar);
-        SqlCommand val = new SqlCommand("SP_ValidarUSuaruio", sqldb)
+        using (SqlConnection conn = new SqlConnection(conectar))
         {
-            CommandType = CommandType.StoredProcedure
-        };
-        val.Connection.Open();
-        val.Parameters.Add("@Mail", SqlDbType.VarChar, 50).Value = tbMail.Text;
-        val.Parameters.Add("@Contrasenia", SqlDbType.VarChar, 50).Value = tbPass.Text;
-        val.Parameters.Add("@Patron", SqlDbType.VarChar, 50).Value = patron;
-        SqlDataReader dr = val.ExecuteReader();
-        if (dr.Read())
-        {
-            Response.Redirect("Perfil.aspx");
+            SqlCommand reg = new SqlCommand("SP_ValidarUsuario", conn);
+            reg.Parameters.AddWithValue("@Mail", tbMail.Text);
+            reg.Parameters.AddWithValue("@Pass", tbPass.Text);
+            reg.Parameters.AddWithValue("@Patron", patron);
+            reg.CommandType = CommandType.StoredProcedure;
+
+            reg.Connection.Open();
+            idUsuario = Convert.ToInt32(reg.ExecuteScalar());
+
+            if (idUsuario != 0)
+            {
+                Session["Logged"] = idUsuario;
+                Response.Redirect("Perfil.aspx");
+            }
+            else
+            {
+                lbError.Text = "El Usuario o Contraseña no existen";
+            }
         }
-        else
-        {
-            lbError.Text = "Contraseña o Correo Invalidos";
-        }
-        val.Connection.Close();
     }
 }

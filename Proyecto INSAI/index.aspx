@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="Index" %>
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta charset="utf-8" />
-    <title>Bienvenida</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Bienvenida</title>
 
     <!-- Prefatch -->
     <link rel="prefetch" href="login.html" as="document" />
@@ -17,21 +18,20 @@
 
     <!-- Fuentes -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
 </head>
 <body>
     <header class="header">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="Index.html">
+                <a class="logo" href="Index.aspx">
                     <h1 class="logo__nombre no-margin centrartexto">Data<span class="logo__bold">Base</span></h1>
                 </a>
                 <nav class="navegacion">
                     <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    <a href="login.html" class="navegacion__enlace">Log In</a>
-                    <a href="singup.html" class="navegacion__enlace singup">Sign Up</a>
+                    <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.html" class="boton boton--primario">Contratar Servicio</a>
                 </div>
             </article>
             <article class="entrada">
@@ -73,7 +73,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.html" class="boton boton--primario">Contratar Servicio</a>
                 </div>
             </article>
             <article class="entrada">
@@ -88,7 +88,7 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut aliquam libero. Integer a dui ligula. Fusce tincidunt leo non commodo pretium. Duis nec dignissim ante. Nullam accumsan venenatis tristique. Maecenas placerat et nulla nec lobortis. Maecenas sapien nulla, fermentum vel tempus rhoncus, maximus sit amet libero.
                     </p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                    <a href="entrada.html" class="boton boton--primario">Contratar Servicio</a>
                 </div>
             </article>
         </main>
@@ -111,14 +111,13 @@
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">
-                <a class="logo" href="index.html">
+                <a class="logo" href="Index.aspx">
                     <h1 class="logo__nombre no-margin centrartexto">Data<span class="logo__bold">Base</span></h1>
                 </a>
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__enlace">Nosotos</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
-                    <a href="login.html" class="navegacion__enlace">Log In</a>
-                    <a href="singup.html" class="navegacion__enlace">Sign Up</a>
+                    <a href="Perfil.aspx" class="navegacion__enlace singup">Perfil</a>
                 </nav>
             </div>
         </div>

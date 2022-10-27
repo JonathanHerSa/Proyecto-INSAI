@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Perfil.aspx.cs" Inherits="Perfil" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="addProducto.aspx.cs" Inherits="addProducto" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Bienvenida</title>
+           <title>DataBase</title>
 
     <!-- Prefatch -->
     <link rel="prefetch" href="perfil.html" as="document" />
@@ -43,26 +43,47 @@
             </p>
         </div>
     </header>
-    <div class="contenedor cont-principal">
-        <main class="main">
-            <h3 class="centrartexto">Productos</h3>
-            <article class="entrada">
-                <div class="entrada__img">
 
-                </div>
-                <div class="entrada__cont">
-                    <h4>Nombre Producto</h4>
-                </div>
-            </article>
-        </main>
-        <aside class="sidebar">
-            <h3>Peril</h3>
-            <form class="sidebar" runat="server">
-                <asp:Label CssClass="campo__label" ID="lbnombre" runat="server" Text=""></asp:Label>
-                <asp:Button CssClass="boton boton--secundario" ID="btnCerrar" runat="server" Text="Cerrar Sesion" OnClick="btnCerrar__click"/>
-            </form>
-        </aside>
-    </div>
+    <main class="contenedor">
+        <h3 class="centrartexto">Registrate</h3>
+        <div class="login-bg login-bg__su"></div>
+        <form class="formulario__reg formulario__reg--su" runat="server">
+            <div class="campo">
+                <asp:Label class="campo__label--login" runat="server" Text="Codigo de Barras"></asp:Label>
+                <asp:TextBox ID="tbId" class="campo__field--login" type="number" placeholder="1234
+                    " runat="server"></asp:TextBox>
+            </div>
+
+            <div class="campo">
+                <asp:Label class="campo__label--login" runat="server" Text="Correo"></asp:Label>
+                <asp:TextBox ID="tbMail" class="campo__field--login" type="email" placeholder="ejemplo@mail.com" runat="server"></asp:TextBox>
+            </div>
+            
+            <div class="campo">
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Contraseña"></asp:Label>
+                <asp:TextBox ID="tbPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="campo">
+                <asp:Label CssClass="campo__label--login" runat="server" Text="Confirmar contraseña"></asp:Label>
+                <asp:TextBox ID="tbCPass" class="campo__field--login" type="password" placeholder="Password" runat="server"></asp:TextBox>
+            </div>
+
+            <div class="campo">
+                <asp:Label CssClass="campo__labelSU--error campo__labelSU" ID="lbError" runat="server" Text=""></asp:Label>
+                <asp:Label CssClass="campo__labelSU--correct campo__labelSU" ID="lbCorrect" runat="server" Text=""></asp:Label>
+            </div>
+
+            <div class="campo">
+                <%--<asp:Button CssClass="boton boton--secundario" ID="btnRegistrar" runat="server" Text="Registrar" OnClick="btnRegistro__Click" />--%>
+            </div>
+
+            <div class="campo">
+                <a href="Login.aspx" class="campo__labelSU campo__labelSU--registro">Iniciar Sesion</a>
+            </div>
+        </form>
+    </main>
+
     <footer class="footer">
         <div class="contenedor">
             <div class="barra">

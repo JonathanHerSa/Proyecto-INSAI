@@ -87,12 +87,11 @@ img {
 .singup:hover{
     background-color: var(--primario);
     color: var(--negro);
-    padding 1rem 3rem;
 }
 
 .header {
     background-image: url(../img/banner.jpg);
-    height: 60rem;
+    height: 41rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -283,12 +282,27 @@ img {
 }
 
 /*login*/
+.formulario__reg {
+    background-color: var(--blanco);
+    margin: -37rem auto 0 auto;
+    width: 50%;
+    padding: 5rem;
+}
+
+.formulario__reg--su {
+    margin: -51rem auto 0 auto;
+}
+
 .login-bg {
     background-image: url(../img/login.jpg);
     height: 40rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.login-bg__su {
+    height: 60rem;
 }
 
 .campo__buton {
@@ -304,19 +318,32 @@ img {
 
 .campo__labelSU {
     text-align: right;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .campo__labelSU--registro{
-    color: var(--negro);
+    color: var(--primario);
 }
 
 .campo__labelSU--error{
-    color: var(--rojo);
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.campo__labelSU--correct{
+    background-color: var(--primario);
+    color: var(--blanco);
 }
 
 .campo__field--login {
     flex: 1;
     border: 1px solid var(--gris);
     margin-left: 1rem;
+}
+
+/*Perfil*/
+.h3 {
+    font-family: var(--fuenteheading);
+    line-height: 1.2;
+    font-size: 3.2rem;
 }
